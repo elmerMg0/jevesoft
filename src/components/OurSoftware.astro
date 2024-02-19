@@ -1,0 +1,137 @@
+<section class="relative max-w-7xl mx-auto w-11/12 my-20">
+  <h2 class="text-xl text-center mt-10  uppercase text-[#127AFF]">Nuestro Software Desarrollado</h2>
+  <h5 class="text-3xl text-center font-bold mb-10">Porfolio</h5>
+  <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide pl-7 md:pl-10">
+          <div>
+            <div class="flex gap-x-4 items-center mb-5">
+              <img class="w-20 h-20" src="LogoPos.jpeg" />
+              <div class="flex flex-col items-start">
+                <h3 class="text-2xl">Restaurant Pos</h3>
+                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores laboriosam </p>
+              </div>
+            </div>
+            
+            <div>
+              <p class="text-base mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ea adipiscio deleniti reprehenderit quam similique quoddfdfdddfdf tempora, ratione, ipsa ipsam distinctio, corrupti saepe mollitia modificacio. Reiciendis dolore odio laborum ipsa.</p>
+              
+              <h4 class="text-base font-bold mb-2">Features dimas Restaurant</h4>
+              <ul class="text-base list-disc list-inside">
+                <li>Printer Module</li>
+                <li>Kithcne MOdule</li>
+                <li>Bar Module </li>
+              </ul>
+            </div>
+          </div>
+          <img src="posTerminal.jpg" />
+        </div>
+        
+        <div class="swiper-slide pl-7 md:pl-10">
+          <div>
+            <div class="flex gap-x-4 items-center mb-5">
+              <img class="w-20 h-20" src="ipeo.png" />
+              <div class="flex flex-col items-start">
+                <h3 class="text-2xl">Ipeo</h3>
+                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores laboriosam </p>
+              </div>
+            </div>
+            
+            <div>
+              <p class="text-base mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ea adipisci deleniti reprehenderit quam similique quod tempora, ratione, ipsa ipsam distinctio, corrupti saepe mollitia modi. Reiciendis dolore odio laborum ipsa.</p>
+              
+              <h4 class="text-base font-bold mb-2">Features dimas Restaurant</h4>
+              <ul class="text-base list-disc list-inside">
+                <li>Courses Module</li>
+                <li>Test MOdule</li>
+                <li>Other Module </li>
+              </ul>
+            </div>
+          </div>
+          <img src="ipeoWeb.png" />
+        </div>
+      </div>
+     <!--  <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
+    </div>
+  </div>
+  <button class="swiper-button-nextt"> 
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M5 12l14 0" />
+      <path d="M15 16l4 -4" />
+      <path d="M15 8l4 4" />
+    </svg>
+  </button>
+  <button class="swiper-button-prevv"> 
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M5 12l14 0" />
+      <path d="M5 12l4 4" />
+      <path d="M5 12l4 -4" />
+    </svg>
+  </button>
+</section>
+
+<style>
+
+/*   .swiper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  } */
+  .swiper-wrapper{
+  }
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .swiper-slide img {
+    border-radius: 1rem;
+  }
+  .swiper-button-prevv{
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    z-index: 10;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  .swiper-button-nextt{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    z-index: 10;
+    background-color: white;
+    border-radius: 50%;
+}
+  @media(max-width: 768px){
+    .swiper-slide{
+      grid-template-columns: 1fr;
+      padding-right: 1rem;
+    }
+    .swiper-button-nextt{
+      right: -16px;
+    }
+  }
+</style>
+
+<script>
+  import Swiper from "swiper";
+  var swiper = new Swiper(".mySwiper", {});
+  const next = document.querySelector(".swiper-button-nextt");
+  next?.addEventListener("click", function() {
+    swiper.slideNext()
+  })
+
+  const previous = document.querySelector(".swiper-button-prevv");
+  previous?.addEventListener("click", function() {
+    swiper.slidePrev()
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -1,0 +1,136 @@
+<section class="contact py-20">
+    <div class="w-11/12 max-w-7xl mx-auto contact-card">
+        <div class="lets-start">
+            <h3 class="text-5xl  mb-10 text-[#127AFF] ">Let's start</h3>
+            <div>
+                <span class="uppercase text-xs pl-5">You are here</span>
+                <ul class="flex flex-col gap-y-6 mb-10 pl-5">
+                    <li>1 Share your requeriments</li>
+                    <li>2 Discuss them with our experts</li>
+                    <li>
+                        <p class="getfree">3 Get a free quote</p>
+                    </li>
+                    <li>4 Start the project</li>
+                </ul>
+                <div>
+                    <p>If you have any questions, email us</p>
+                    <a class="text-[#ff415c]" href="mailto:qjBQc@example.com">qjBQc@example.com</a>
+                </div>
+            </div>
+        </div>
+        <form class="form">
+            <label>
+                <span class="">Nombre:</span> <input type="text" placeholder="Jonh Doe">
+            </label>
+            <label>
+               <span>Email:</span> <input type="email" placeholder="e-mail">
+            </label>
+            <label>
+                <span>Mensaje:</span> <textarea placeholder="Describe tu idea"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+</div>
+    
+</section>
+
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+    .contact{
+        background: rgb(43,37,70);
+        background: linear-gradient(29deg, rgba(43,37,70,1) 0%, rgba(17,34,68,1) 100%);
+        color: white
+    }
+    .contact-card{
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+    }
+    @media(max-width: 768px){
+        .contact-card{
+            grid-template-columns: 1fr;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .lets-start{
+            margin: auto;
+        }
+    }
+    li{
+        position: relative;
+    }
+    li::before{
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        border: 1px solid white;
+        left: -20px;
+        top: 8px;
+    }
+    li::after{
+        content: "";
+        width: 2px;
+        height: 39px;
+        border-radius: 50%;
+        position: absolute;
+        border: 1px solid white;
+        left: -16px;
+        top: 17px;
+    }
+    li:nth-child(1)::before{
+        border: 1px solid #127AFF;
+    }
+    li:last-child::after{
+        display: none;
+    }
+    .getfree::before{
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image:  url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.5 9L12 16.5 4.5 9' stroke='%23fff' stroke-width='2' stroke-linecap='square'/%3E%3C/svg%3E");
+        position: absolute;
+        left: -27px;
+        top: calc(100% + 15px);
+    }
+    input, textarea{
+        background: transparent;
+        border-bottom: 1px solid white;
+        color: white;
+        align-items: right;
+        width: 100%;
+        padding: 0.5rem 0; 
+        transition: .2s;
+    }
+    input::placeholder, textarea::placeholder{
+        color: rgb(128, 128, 128);
+    }
+    input:focus, textarea:focus{
+        outline: none;
+        border-bottom: 1px solid #127AFF;
+    }
+    label{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 1rem;
+    }
+    span{
+        width: 105px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem;
+    }
+
+    button{
+        background-color: #ff415c;
+        padding: 1rem;
+        width: 300px;
+    }
+</style>
+
