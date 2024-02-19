@@ -1,0 +1,48 @@
+<ul class="my-8">
+    <li>
+        <img src="customers//dimasres.png" alt="dimas res">
+    </li>
+    <li>
+        <img src="customers//casaslaurel.png" alt="dimas res">
+    </li>
+    <li>
+        <img src="customers//sedeelec.png" alt="dimas res">
+    </li>
+    <li>
+        <img src="customers//dimasres.png" alt="dimas res">
+    </li>
+    <li>
+        <img src="customers//apisxpress.png" alt="dimas res">
+    </li>
+</ul>
+
+<style>
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    li{
+        filter: brightness(0) saturate(100%) invert(67%) sepia(10%) saturate(734%) hue-rotate(170deg) brightness(91%) contrast(89%);
+        transition: all 0.3s ease-in-out;
+        padding: 12px 17px;
+        max-width: 200px;
+        max-height: 50px;
+    }
+    @media(max-width: 768px){
+        li{
+            max-width: 130px;
+        }
+    }
+    li img{
+        width: 100%;
+        max-height: 50px;
+    }
+    li:hover{
+        filter: none
+    }
+
+    /* 
+    vwv */
+</style>
