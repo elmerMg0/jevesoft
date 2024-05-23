@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro'
+import HeaderGlobal from '../components/HeaderGlobal.astro'
+import Footer from '../components/Footer.astro'
+import BenefitsRestaurant from '../components/BenefitsRestaurant.astro'
+---
+<Layout title="About">
+    <HeaderGlobal/>
+    <section class="grid grid-cols-1 md:grid-cols-2 place-items-center mx-auto w-11/12 max-w-7xl relative gap-x-5">
+        <img class="" src="../Pospng.png" alt="">
+        <div class="flex flex-col gap-y-5">
+            <h3 class="text-3xl font-bold text-[#00337F]">Gestión de tu restaurante a tu alcance</h3>
+            <p>Nuestro software integral y fácil de usar te permite gestionar tu restaurante desde cualquier dispositivo y lugar, con una interfaz intuitiva que simplifica todas tus operaciones.
+            </p>
+
+            <button class="text-[#ffffff] bg-[#00337F] px-5 py-3 text-center rounded w-56 hover:shadow-2xl">Me gustaria saber más!</button>
+        </div>
+    </section>
+    <BenefitsRestaurant/>
+    <Footer />
+</Layout>

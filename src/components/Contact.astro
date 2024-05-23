@@ -1,37 +1,68 @@
+<script is:inline  type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      emailjs.init('T6RLzSXlknGeZHIJg');
+  
+      const form = document.querySelector('.form');
+      const btn = document.querySelector('.button');
+  
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+  
+        btn.textContent = 'Enviando...';
+  
+        const serviceID = 'default_service';
+        const templateID = 'template_w8vvwqk';
+  
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.textContent = 'Enviar';
+            alert('¡Correo enviado con éxito!');
+            form.reset(); // Opcional: reinicia el formulario después del envío
+          })
+          .catch((err) => {
+            btn.textContent = 'Enviar';
+            alert('Error al enviar el correo: ' + JSON.stringify(err));
+          });
+      });
+    });
+  </script>
+  
+
 <section class="contact py-20">
     <div class="w-11/12 max-w-7xl mx-auto contact-card">
         <div class="lets-start">
-            <h3 class="text-5xl  mb-10 text-[#127AFF] ">Let's start</h3>
+            <h3 class="text-5xl  mb-10 text-[#127AFF] ">Comencemos</h3>
             <div>
-                <span class="uppercase text-xs pl-5">You are here</span>
+                <span class="uppercase text-xs pl-5">Tu estas aqui</span>
                 <ul class="flex flex-col gap-y-6 mb-10 pl-5">
-                    <li>1 Share your requeriments</li>
-                    <li>2 Discuss them with our experts</li>
+                    <li>1 Comparte tus requerimientos</li>
+                    <li>2 Los discutimos con nuestros expertos</li>
                     <li>
-                        <p class="getfree">3 Get a free quote</p>
+                        <p class="getfree">3 Obtener una cotizacion gratis</p>
                     </li>
-                    <li>4 Start the project</li>
+                    <li>4 Empezar el proyecto</li>
                 </ul>
                 <div>
-                    <p>If you have any questions, email us</p>
-                    <a class="text-[#ff415c]" href="mailto:qjBQc@example.com">qjBQc@example.com</a>
+                    <p>Si tu tienes alguna pregunta, envianos un email</p>
+                    <a class="text-[#ff415c]" href="mailto:qjBQc@example.com">jevesoft@gmail.com</a>
                 </div>
             </div>
         </div>
         <form class="form">
             <label>
-                <span class="">Nombre:</span> <input type="text" placeholder="Jonh Doe">
+                <span class="">Nombre:</span> <input name="to_name" type="text" placeholder="Jonh Doe">
             </label>
             <label>
-               <span>Email:</span> <input type="email" placeholder="e-mail">
+               <span>Email:</span> <input type="email" placeholder="e-mail" name="from_name">
             </label>
             <label>
-                <span>Mensaje:</span> <textarea placeholder="Describe tu idea"></textarea>
+                <span>Mensaje:</span> <textarea placeholder="Describe tu idea" name="message"></textarea>
             </label>
-            <button type="submit">Send</button>
+            <button class="button" type="submit">Enviar</button>
         </form>
 </div>
-    
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </section>
 
 <style>
