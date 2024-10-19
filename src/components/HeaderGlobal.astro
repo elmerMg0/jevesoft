@@ -1,7 +1,7 @@
 <div class="header text-white text-xl relative">
     <header class="flex justify-between items-center mx-auto w-11/12 max-w-7xl">
         <div class="flex items-center ">
-        <div class="w-20">
+        <div class="w-16 md:w-20">
             <img src='../logojeve.jpeg' class="" alt="Jevesoft logo" />
         </div>
         <h2 class="">
@@ -10,9 +10,21 @@
     </div>	
     <nav class="flex items-center gap-x-4">
         <ul class="flex my-0 gap-x-4 decoration-white">
-            <li class="m-0 decoration-white">Company</li>
-            <li class="m-0">Services</li>
-            <li class="m-0">Pricing</li>
+            <li class="m-0 decoration-white">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            <li class="m-0">
+                <a href="#benefits">
+                    Caracteristicas
+                </a>
+            </li>
+            <li class="m-0">
+                <a href="#prices">
+                    Precios
+                </a>
+            </li>
         </ul>
         <!-- <button class="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded">-</button> -->
     </nav>
@@ -31,8 +43,8 @@
 	}
 	@media(max-width: 768px){
 		.header{
+			background-position: top;
 			height: 70px;
-			background-position: 70%
 		}
 		nav{
 			display: none;

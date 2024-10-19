@@ -1,0 +1,140 @@
+---
+const plans = [
+  {
+    title: "PLAN MENSUAL",
+    price: "150 Bs.",
+    period: "Plan mensual",
+    features: [
+      "Configuración de Mesas",
+      "Reportes Avanzados",
+      "Módulo Cocina",
+      "Gestión Inventario",
+      "Actualizaciones del software",
+      "Soporte técnico",
+      "Backup y Reportes",
+    ],
+    image: "../plans/monthPlan.jpg",
+    link: "https://wa.me/59171666228?text=Hola%20me%20gustaria%20mas%20información%20sobre%20el%20plan%20Mensual",
+  },
+  {
+    title: "PLAN ANUAL",
+    price: "130 Bs.",
+    period: "1560 Bs Anual",
+    features: [
+      "Configuración de Mesas",
+      "Reportes Avanzados",
+      "Módulo Cocina",
+      "Gestión Inventario",
+      "Actualizaciones del software",
+      "Soporte técnico",
+      "Backup y Reportes",
+    ],
+    image: "../plans/yearPlan.jpg",
+    popular: true,
+    link: "https://wa.me/59171666228?text=Hola%20me%20gustaria%20mas%20información%20sobre%20el%20Plan%20Anual",
+  },
+  {
+    title: "PLAN AL CONTADO",
+    price: "1350 Bs.",
+    period: "Plan contado",
+    features: [
+      "Configuración de Mesas",
+      "Reportes Avanzados",
+      "Módulo Cocina",
+      "Gestión Inventario",
+      "Actualizaciones del software",
+      "Soporte técnico",
+      "Backup y Reportes",
+    ],
+    image: "../plans/plan3.jpg",
+    link: "https://wa.me/59171666228?text=Hola%20me%20gustaria%20mas%20información%20sobre%20el%20Plan%20al%20Contado",
+  },
+];
+---
+
+<div class="container mx-auto py-16 px-4" id="prices">
+  <h2 class="text-3xl font-bold text-center mb-20 text-[#00337F] title">
+    Nuestros Planes
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+    {
+      plans.map((plan, index) => (
+        <div
+          class={`flex flex-col shadow-lg transition-all duration-300 ${
+            plan.popular ? "md:-mt-8 md:mb-8 scale-105 z-10" : "hover:scale-105"
+          }`}
+        >
+          <div
+            class={`text-white text-center py-6 relative ${
+              plan.popular ? "bg-[#127AFF]" : "bg-[#00337F]"
+            }`}
+          >
+            <h3 class="text-xl font-bold">{plan.title}</h3>
+            {plan.popular && (
+              <span class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-[#00337F] text-xs font-bold py-1 px-3 rounded-full">
+                MÁS POPULAR
+              </span>
+            )}
+          </div>
+          <div class="flex-grow flex flex-col items-center justify-center p-8">
+            <div class="mb-6">
+              <img
+                src={plan.image}
+                alt={`Plan ${index + 1}`}
+                width="120"
+                height="120"
+                class="rounded-full border-4 border-[#127AFF]"
+              />
+            </div>
+            <div class="text-4xl text-[#127AFF] mb-2">{plan.price}</div>
+            <div class="text-sm text-gray-500 mb-8">{plan.period}</div>
+            <ul class="space-y-3 text-left w-full">
+              {plan.features.map((feature, featureIndex) => (
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5 text-[#127AFF]"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+
+                  <span class="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="p-8">
+            <button
+              class={`w-full py-2 text-lg transition-colors duration-300 text-white ${
+                plan.popular
+                  ? "bg-[#127AFF] hover:bg-[#00337F]"
+                  : "bg-[#00337F] hover:bg-[#127AFF]"
+              }`}
+            >
+              <a
+                href={plan.link}
+                target="_blank"
+              >
+                Adquirir Ahora
+              </a>
+            </button>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    .title {
+      margin-bottom: 1rem;
+    }
+  }
+</style>
