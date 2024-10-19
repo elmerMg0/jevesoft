@@ -2,8 +2,8 @@
 	<header class="flex justify-between items-center mx-auto w-11/12 max-w-7xl">
 	  <div class="flex items-center">
 		<div class="w-20">
-		  <img src="logojeve.jpeg" class="" alt="Jevesoft logo" />
-		</div>
+            <img src="../logojeve.jpeg" alt="Jevesoft logo" class="fade-mask" />
+          </div>
 		<h2 class="">
 		  Jevesoft
 		</h2>
@@ -80,6 +80,20 @@
 			display: none;
 		}
 	}
+    .fade-mask {
+  mask-image: radial-gradient(
+    circle, 
+    black 60%,  /* Parte visible de la imagen */
+    transparent 100% /* Desvanecimiento en los bordes */
+  );
+  
+  /* Soporte para navegadores WebKit */
+  -webkit-mask-image: radial-gradient(
+    circle, 
+    black 60%,  /* Parte visible de la imagen */
+    transparent 100% /* Desvanecimiento en los bordes */
+  );
+}
 </style>
 
 <script>
