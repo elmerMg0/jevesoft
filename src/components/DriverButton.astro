@@ -1,0 +1,50 @@
+---
+const fileName = "impresora_driver.jar";
+const downloadUrl = "impresora_driver.jar";
+---
+<style>
+  .download-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .download-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .download-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #00337F;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .download-button:hover {
+    background-color: #00337F;
+  }
+  .description{
+    padding: 1rem ;
+  }
+</style>
+
+<div class="download-container">
+  <h2>Descargar Driver de Impresora</h2>
+  <p class="description">Haz clic en el botón de abajo para descargar el archivo:</p>
+  <a href={downloadUrl} download={fileName} class="download-button">Descargar {fileName}</a>
+</div>
