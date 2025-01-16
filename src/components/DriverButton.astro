@@ -1,6 +1,8 @@
 ---
 const fileName = "impresora_driver.jar";
 const downloadUrl = import.meta.env.PUBLIC_DRIVER_URL;
+const fileNameCert = 'local-cert.crt';
+const downloadUrlCert = import.meta.env.PUBLIC_DRIVER_URL_CERT;
 ---
 <style>
   .download-container {
@@ -47,4 +49,10 @@ const downloadUrl = import.meta.env.PUBLIC_DRIVER_URL;
   <h2>Descargar Driver de Impresora</h2>
   <p class="description">Haz clic en el botón de abajo para descargar el archivo:</p>
   <a href={downloadUrl} download={fileName} class="download-button">Descargar {fileName}</a>
+</div>
+
+<div class="download-container">
+  <h2>Descargar certificado</h2>
+  <p class="description">Haz clic en el botón de abajo para descargar el archivo:</p>
+  <a href={downloadUrlCert} download={fileNameCert} class="download-button">Descargar {fileNameCert}</a>
 </div>
