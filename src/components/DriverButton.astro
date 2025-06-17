@@ -1,6 +1,8 @@
 ---
 const fileName = "impresora_driver.jar";
+const fileNameEpson = "impresora_driver_espson.jar";
 const downloadUrl = import.meta.env.PUBLIC_DRIVER_URL;
+const downloadUrlEpson = import.meta.env.PUBLIC_DRIVER_URL_EPSON;
 const fileNameCert = 'local-cert.crt';
 const downloadUrlCert = import.meta.env.PUBLIC_DRIVER_URL_CERT;
 ---
@@ -50,6 +52,14 @@ const downloadUrlCert = import.meta.env.PUBLIC_DRIVER_URL_CERT;
   <p class="description">Haz clic en el botón de abajo para descargar el archivo:</p>
   <a href={downloadUrl} download={fileName} class="download-button">Descargar {fileName}</a>
 </div>
+
+
+<div class="download-container">
+  <h2>Descargar Driver de Impresora EPSON</h2>
+  <p class="description">Haz clic en el botón de abajo para descargar el archivo:</p>
+  <a href={downloadUrlEpson} download={fileNameEpson} class="download-button">Descargar {fileNameEpson}</a>
+</div>
+
 
 <div class="download-container">
   <h2>Descargar certificado</h2>
