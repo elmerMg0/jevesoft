@@ -1,0 +1,145 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="w-full py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#127AFF] mb-4">
+        Empresas que confían en nosotros
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Más de 50 empresas líderes en el mercado han elegido nuestros servicios
+        para impulsar su crecimiento y transformación digital
+      </p>
+    </div>
+
+    <ul
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 items-center justify-items-center"
+    >
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers/apisdelaperu.png"
+            width={140}
+            height={60}
+            alt="Cliente 1"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers//casaslaurel.png"
+            width={140}
+            height={60}
+            alt="Cliente 2"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers//ricono.png"
+            width={140}
+            height={60}
+            alt="Cliente 3"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers//sedeelec.png"
+            width={140}
+            height={60}
+            alt="Cliente 4"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers//qchuro.png"
+            width={140}
+            height={60}
+            alt="Cliente 5"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+      {/* Fila 2 */}
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers//dimasres.png"
+            width={140}
+            height={60}
+            alt="Cliente 6"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers//offside.png"
+            width={140}
+            height={60}
+            alt="Cliente 7"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+        <li
+          class=" rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          <Image
+            src="/customers//apisxpress.png"
+            width={140}
+            height={60}
+            alt="Cliente 8"
+            class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+          />
+        </li>
+
+      <li
+        class=" rounded-xl shadow-sm border p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:scale-105"
+      >
+        <Image
+          src="/customers/elamoresdulce.png"
+          width={140}
+          height={60}
+          alt="Cliente 9"
+          class="h-12 md:h-15 w-auto object-contain  group-hover:opacity-100 transition-opacity duration-300"
+        />
+      </li>
+    </ul>
+  </div>
+
+  <style>
+
+    ul{
+
+    }
+    li {
+      filter: brightness(0) saturate(100%) invert(67%) sepia(10%) saturate(734%) hue-rotate(170deg) brightness(91%) contrast(89%);
+      transition: all 0.3s ease-in-out;
+      border: none;
+    }
+    li:hover {
+      filter: none;
+    }
+  </style>
+</section>

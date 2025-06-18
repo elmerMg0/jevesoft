@@ -1,121 +1,141 @@
 <div class="header text-white text-xl relative">
-	<header class="flex justify-between items-center mx-auto w-11/12 max-w-7xl">
-	  <div class="flex items-center">
-		<div class="w-20">
-            <img src="../logojeve.jpeg" alt="Jevesoft logo" class="fade-mask" />
-          </div>
-		<h2 class="">
-		  Jevesoft
-		</h2>
-	  </div>	
-  
-	  <!-- Botón Burger para abrir el menú -->
-	  <div class="md:hidden relative z-60">
-		<button id="burgerButton" class="text-white focus:outline-none">
-		  <!-- Icono Burger -->
-		  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-		  </svg>
-		</button>
-	  </div>
-  
-	  <!-- Menú de navegación en desktop -->
-	  <nav id="navMenu" class="hidden md:flex items-center gap-x-4">
-		<ul class="flex flex-col md:flex-row my-0 gap-y-2 md:gap-x-4 decoration-white">
-		  <li class="m-0 decoration-white">
-			<a href="/">
-			  Home
-			</a>
-		  </li>
-		  <li class="m-0">
-			<a href="#benefits">
-			  Características
-			</a>
-		  </li>
-		  <li class="m-0">
-			<a href="#prices">
-              Precios
-			</a>
-		  </li>
-		</ul>
-	  </nav>
-	</header>
-  
-	<!-- Menú lateral que se despliega en pantallas pequeñas -->
-	<div id="mobileMenu" class="fixed inset-0 bg-[#124] text-white hidden z-50">
-	  <div class="flex flex-col justify-center items-center h-full relative">
-		<!-- Botón para cerrar el menú -->
-		<button id="closeButton" class="absolute top-5 right-5 text-white z-60">
-		  <!-- Icono de cerrar -->
-		  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-		  </svg>
-		</button>
-  
-		<!-- Links del menú -->
-		<ul id="mobileNavLinks" class="flex flex-col items-center gap-y-8 text-2xl">
-		  <li><a href="/" class="hover:text-blue-400">Home</a></li>
-		  <li><a href="#benefits" class="hover:text-blue-400">Características</a></li>
-		  <li><a href="#prices" class="hover:text-blue-400">Precios</a></li>
-		</ul>
-	  </div>
-	</div>
+  <header class="flex justify-between items-center mx-auto w-11/12 max-w-7xl">
+    <a class="flex items-center" href="/">
+      <div class="w-20">
+        <img src="../logojeve.jpeg" alt="Jevesoft logo" class="fade-mask" />
+      </div>
+      <h2 class="">Jevesoft</h2>
+    </a>
+
+    <!-- Botón Burger para abrir el menú -->
+    <div class="md:hidden relative z-60">
+      <button id="burgerButton" class="text-white focus:outline-none">
+        <!-- Icono Burger -->
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú de navegación en desktop -->
+    <nav id="navMenu" class="hidden md:flex items-center gap-x-4">
+      <ul
+        class="flex flex-col md:flex-row my-0 gap-y-2 md:gap-x-4 decoration-white"
+      >
+        <li class="m-0 decoration-white">
+          <a href="/"> Home </a>
+        </li>
+        <li class="m-0">
+          <a href="#benefits"> Características </a>
+        </li>
+        <li class="m-0">
+          <a href="#prices"> Precios </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menú lateral que se despliega en pantallas pequeñas -->
+  <div id="mobileMenu" class="fixed inset-0 bg-[#124] text-white hidden z-50">
+    <div class="flex flex-col justify-center items-center h-full relative">
+      <!-- Botón para cerrar el menú -->
+      <button id="closeButton" class="absolute top-5 right-5 text-white z-60">
+        <!-- Icono de cerrar -->
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Links del menú -->
+      <ul
+        id="mobileNavLinks"
+        class="flex flex-col items-center gap-y-8 text-2xl"
+      >
+        <li><a href="/" class="hover:text-blue-400">Home</a></li>
+        <li>
+          <a href="#benefits" class="hover:text-blue-400">Características</a>
+        </li>
+        <li><a href="#prices" class="hover:text-blue-400">Precios</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-
 <style>
-	.header {
-		background-image: url('../../public//Jevesoft.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: top;
-		height: 80px;
-		width: 100%;
-	}
-	@media(max-width: 768px){
-		.header{
-			background-position: top;
-		}
-		nav{
-			display: none;
-		}
-	}
-    .fade-mask {
-  mask-image: radial-gradient(
-    circle, 
-    black 60%,  /* Parte visible de la imagen */
-    transparent 100% /* Desvanecimiento en los bordes */
-  );
-  
-  /* Soporte para navegadores WebKit */
-  -webkit-mask-image: radial-gradient(
-    circle, 
-    black 60%,  /* Parte visible de la imagen */
-    transparent 100% /* Desvanecimiento en los bordes */
-  );
-}
+  .header {
+    background-image: url("../../public//Jevesoft.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 80px;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .header {
+      background-position: top;
+    }
+    nav {
+      display: none;
+    }
+  }
+  .fade-mask {
+    mask-image: radial-gradient(
+      circle,
+      black 60%,
+      /* Parte visible de la imagen */ transparent 100%
+        /* Desvanecimiento en los bordes */
+    );
+
+    /* Soporte para navegadores WebKit */
+    -webkit-mask-image: radial-gradient(
+      circle,
+      black 60%,
+      /* Parte visible de la imagen */ transparent 100%
+        /* Desvanecimiento en los bordes */
+    );
+  }
 </style>
 
 <script>
-	const burgerButton = document.getElementById('burgerButton');
-	const closeButton = document.getElementById('closeButton');
-	const mobileMenu = document.getElementById('mobileMenu');
-	const navLinks = document.querySelectorAll('#mobileNavLinks a');
-  
-	// Mostrar el menú móvil
-	burgerButton?.addEventListener('click', () => {
-	  mobileMenu?.classList.remove('hidden');
-	});
-  
-	// Cerrar el menú móvil con el botón de cerrar
-	closeButton?.addEventListener('click', () => {
-	  mobileMenu?.classList.add('hidden');
-	});
-  
-	// Cerrar el menú cuando se haga clic en cualquier opción de navegación
-	navLinks.forEach(link => {
-	  link.addEventListener('click', () => {
-		mobileMenu?.classList.add('hidden');
-	  });
-	});
-  </script>
+  const burgerButton = document.getElementById("burgerButton");
+  const closeButton = document.getElementById("closeButton");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const navLinks = document.querySelectorAll("#mobileNavLinks a");
+
+  // Mostrar el menú móvil
+  burgerButton?.addEventListener("click", () => {
+    mobileMenu?.classList.remove("hidden");
+  });
+
+  // Cerrar el menú móvil con el botón de cerrar
+  closeButton?.addEventListener("click", () => {
+    mobileMenu?.classList.add("hidden");
+  });
+
+  // Cerrar el menú cuando se haga clic en cualquier opción de navegación
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+    });
+  });
+</script>
