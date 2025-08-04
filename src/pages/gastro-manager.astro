@@ -1,0 +1,729 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ClientCarousel from "../components/ClienteCarousel"; // Import React component
+
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+
+import {
+  Check,
+  ChefHat,
+  Printer,
+  Settings,
+  Smartphone,
+  Store,
+  Users,
+  BarChart3,
+  CreditCard,
+  Package,
+  ArrowRight,
+  Star,
+} from "lucide-react"; // Lucide icons are React components, can be used directly in Astro if not interactive
+
+const clients = [
+  {
+    name: "Apis de la Peru Doña Estelita",
+    logo: "/customers/apisdelaperu.png",
+  },
+  { name: "Casas Laurel", logo: "/customers/casaslaurel.png" },
+  { name: "Ricono", logo: "/customers/ricono.png" },
+  { name: "Sedeelec", logo: "/customers/sedeelec.png" },
+  { name: "Q'Churo sabor chapaco", logo: "/customers/qchuro.png" },
+  { name: "Dimas Restaurante", logo: "/customers/dimasres.png" },
+  { name: "Offside", logo: "/customers/offside.png" },
+  { name: "El amor es dulce", logo: "/customers/elamoresdulce.png" },
+  { name: "Apis Xpress", logo: "/customers/apisxpress.png" },
+  { name: "Pollos Cumavi", logo: "/customers/polloCumavi.jpg" },
+  { name: "Ratatouille", logo: "/customers/ratatouille.jpeg" },
+];
+
+const plans = [
+  {
+    name: "Mensual",
+    price: "Bs. 150",
+    period: "/mes",
+    description: "Perfecto para empezar",
+    features: [
+      "Todas las características incluidas excepto e-commerce",
+      "Soporte técnico 24/7",
+      "Actualizaciones automáticas",
+      "Backup diario",
+      "1 ubicación",
+    ],
+    popular: false,
+    link: "https://wa.me/59171666228?text=Hola%20me%20gustaria%20mas%20información%20sobre%20el%20plan%20Mensual",
+  },
+  {
+    name: "Semestral",
+    price: "Bs. 780",
+    period: "/semestral",
+    description: "Ahorra 14% pagando 6 meses",
+    originalPrice: "Bs. 900",
+    features: [
+      "Todas las características incluidas",
+      "Soporte técnico prioritario",
+      "Actualizaciones automáticas",
+      "Backup diario",
+      "1 ubicacion",
+      "Capacitación personalizada",
+    ],
+    popular: true,
+    link: "https://wa.me/59171666228?text=Hola%20me%20gustaria%20mas%20información%20sobre%20el%20Plan%20semestral",
+  },
+  {
+    name: "Anual",
+    price: "Bs. 1350",
+    period: "/anual",
+    description: "Máximo ahorro - 25% de descuento",
+    originalPrice: "Bs. 1800",
+    features: [
+      "Todas las características incluidas",
+      "Soporte técnico VIP",
+      "Actualizaciones automáticas",
+      "Backup diario",
+      "1 ubicacion",
+      "Capacitación personalizada",
+      "Consultoría mensual",
+    ],
+    popular: false,
+    link: "https://wa.me/59171666228?text=Hola%20me%20gustaria%20mas%20información%20sobre%20el%20Plan%20al%20anual",
+  },
+];
+---
+
+<Layout title="Gastro Manager">
+  <div class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="relative bg-white py-24 px-4 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-[#00337F]/20 via-transparent to-[#127AFF]/20"
+      >
+      </div>
+      <div class="max-w-6xl mx-auto text-center relative z-10">
+        <Badge
+          className="mb-6 bg-[#127AFF]/10 text-[#00337F] border-[#127AFF]/20 px-4 py-2 text-sm font-medium"
+        >
+          Sistema de Gestión Restaurantero
+        </Badge>
+        <h1
+          class="text-6xl md:text-7xl font-bold mb-8 text-gray-900 tracking-tight"
+        >
+          Gastro<span
+            class="bg-gradient-to-r from-[#00337F] to-[#127AFF] bg-clip-text text-transparent"
+            >Manager</span
+          >
+        </h1>
+        <p
+          class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-600 leading-relaxed"
+        >
+          La solución tecnológica más completa para la gestión de tu
+          restaurante. Moderniza tu negocio con herramientas inteligentes y
+          fáciles de usar.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <a
+            class="bg-[#00337F] flex items-center rounded text-white hover:bg-[#00337F]/90 px-8 py-2 text-lg font-medium group"
+            href="https://wa.me/59171666228?text=Hola%20me%20gustaria%20una%20demo%20sobre%20el%20Sistema%20Gastro%20Manager"
+            target="_blank"
+          >
+            Solicitar Demo
+            <ArrowRight
+              className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
+            />
+          </a>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-gray-300 text-gray-700 rounded hover:bg-gray-50 px-8 py-4 text-lg font-medium bg-transparent"
+          >
+            Ver Características
+          </Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section
+      class="py-24 px-4 bg-gradient-to-b from-gray-50/50 to-white relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-[url('/placeholder.svg?height=400&width=800')] opacity-5"
+      >
+      </div>
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16">
+          <Badge
+            className="mb-6 bg-[#127AFF]/10 text-[#00337F] border-[#127AFF]/20 px-4 py-2 text-sm font-medium"
+          >
+            Clientes Satisfechos
+          </Badge>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Más de{" "}
+            <span
+              class="bg-gradient-to-r from-[#00337F] to-[#127AFF] bg-clip-text text-transparent"
+            >
+              30 restaurantes
+            </span>{" "}
+            confían en nosotros
+          </h2>
+          <p
+            class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12"
+          >
+            Desde pequeños emprendedores hasta grandes empresas de restaurantes,
+            todos eligen Gastro Manager para optimizar sus operaciones
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-[#00337F] mb-2">30+</div>
+              <div class="text-gray-600">Restaurantes Activos</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-[#127AFF] mb-2">98%</div>
+              <div class="text-gray-600">Satisfacción del Cliente</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-[#00337F] mb-2">24/7</div>
+              <div class="text-gray-600">Soporte Técnico</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Logos Carousel (React Component) -->
+        <ClientCarousel clients={clients} client:load />
+
+        <!-- Testimonial Highlight -->
+        <!-- <div
+          class="bg-gradient-to-r from-[#00337F] to-[#127AFF] rounded-3xl p-8 md:p-12 text-white text-center mt-16"
+        >
+          <div class="max-w-4xl mx-auto">
+            <div class="mb-6">
+              <div class="flex justify-center mb-4">
+                {
+                  [...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-6 w-6 fill-current text-yellow-300"
+                    />
+                  ))
+                }
+              </div>
+              <blockquote
+                class="text-xl md:text-2xl font-medium leading-relaxed mb-6"
+              >
+                "Gastro Manager transformó completamente la forma en que
+                gestionamos nuestro restaurante. La eficiencia aumentó un 40% y
+                nuestros clientes están más satisfechos que nunca."
+              </blockquote>
+              <div class="flex items-center justify-center gap-4">
+                <div
+                  class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                >
+                  <Users className="h-6 w-6" />
+                </div>
+                <div class="text-left">
+                  <div class="font-semibold">María González</div>
+                  <div class="text-white/80 text-sm">
+                    Gerente, Restaurante El Sabor
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Todo lo que necesitas
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Herramientas completas para gestionar tu restaurante de manera
+            eficiente y moderna
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {
+            [
+              {
+                icon: () => <Users className="h-6 w-6" />,
+                title: "Soporte Personalizado",
+                description:
+                  "Atención especializada 24/7 para resolver todas tus dudas y necesidades.",
+              },
+              {
+                icon: <ChefHat className="h-6 w-6" />,
+                title: "Módulo de Cocina",
+                description:
+                  "Gestión completa de órdenes, tiempos de preparación y comunicación con el personal.",
+              },
+              {
+                icon: <BarChart3 className="h-6 w-6" />,
+                title: "Reportes Avanzados",
+                description:
+                  "Análisis detallados de ventas, productos más vendidos y métricas de rendimiento.",
+              },
+              {
+                icon: <Store className="h-6 w-6" />,
+                title: "Tienda Virtual",
+                description:
+                  "Plataforma de e-commerce integrada para pedidos en línea y delivery.",
+              },
+              {
+                icon: <Printer className="h-6 w-6" />,
+                title: "Impresoras",
+                description:
+                  "Compatibilidad con múltiples tipos de impresoras térmicas y matriciales.",
+              },
+              {
+                icon: <Settings className="h-6 w-6" />,
+                title: "Configuración de Mesas",
+                description:
+                  "Gestión visual de mesas, reservas y distribución del restaurante.",
+              },
+              {
+                icon: <Users className="h-6 w-6" />,
+                title: "Recursos Humanos",
+                description:
+                  "Control de horarios, retrasos, horas extra, adelantos y gestión del personal.",
+              },
+              {
+                icon: <CreditCard className="h-6 w-6" />,
+                title: "Facturación Electrónica",
+                description:
+                  "Sistema completo de facturación en línea disponible desde el 01 de Octubre.",
+              },
+              {
+                icon: <Package className="h-6 w-6" />,
+                title: "Inventarios",
+                description:
+                  "Control total de stock, alertas de productos y gestión de proveedores.",
+              },
+              {
+                icon: <Smartphone className="h-6 w-6" />,
+                title: "Multiplataforma",
+                description:
+                  "Operativo desde cualquier dispositivo: celular, tablet o computadora.",
+              },
+            ].map((feature, index) => (
+              <Card
+                key={index}
+                className="border-0 bg-white hover:bg-gray-50/50 transition-all duration-300 group p-6"
+              >
+                <CardHeader className="pb-4">
+                  <div class="mb-4 p-3 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-xl w-fit group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-gray-900">
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <CardDescription className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Feature Highlight -->
+    <section
+      class="py-20 px-4 bg-gradient-to-r from-[#00337F] to-[#127AFF] relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-[url('/placeholder.svg?height=400&width=800')] opacity-10"
+      >
+      </div>
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <Badge
+          className="bg-white/20 text-white border-white/30 mb-6 px-4 py-2 text-sm font-medium"
+        >
+          ¡Disponible desde Octubre!
+        </Badge>
+        <h3 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+          Facturación Electrónica
+        </h3>
+        <p class="text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+          Cumple con todas las regulaciones fiscales con nuestro sistema de
+          facturación electrónica integrado, disponible desde el 01 de Octubre.
+        </p>
+        <Button
+          size="lg"
+          className="bg-white text-[#00337F] rounded hover:bg-gray-100 px-8 py-4 text-lg font-medium"
+        >
+          Más Información
+        </Button>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Planes flexibles
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Elige el plan que mejor se adapte a las necesidades de tu negocio
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {
+            plans.map((plan, index) => (
+              <Card
+                key={index}
+                className={`relative rounded-xl border-2 transition-all duration-300 hover:shadow-xl ${
+                  plan.popular
+                    ? "border-[#127AFF] shadow-lg scale-105"
+                    : "border-gray-200 hover:border-gray-300"
+                }`}
+              >
+                {plan.popular && (
+                  <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-[#127AFF] text-white px-6 py-2 text-sm font-medium flex items-center gap-1">
+                      <Star className="h-4 w-4 fill-current" />
+                      Más Popular
+                    </Badge>
+                  </div>
+                )}
+                <CardHeader className="text-center pb-8 pt-8">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.name}
+                  </CardTitle>
+                  <CardDescription className="text-gray-600 mb-6">
+                    {plan.description}
+                  </CardDescription>
+                  <div class="flex items-baseline justify-center gap-2">
+                    <span class="text-5xl font-bold text-gray-900">
+                      {plan.price}
+                    </span>
+                    <span class="text-gray-600">{plan.period}</span>
+                  </div>
+                  {plan.originalPrice && (
+                    <p class="text-sm text-gray-500 mt-2">
+                      <span class="line-through">{plan.originalPrice}/mes</span>
+                    </p>
+                  )}
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <ul class="space-y-4 mb-8">
+                    {plan.features.map((feature) => (
+                      <li  class="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span class="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    style="display: block;"
+                    class={` text-white rounded text-center px-8 py-3 text-lg font-medium ${
+                      plan.popular
+                        ? "bg-[#127AFF] hover:bg-[#127AFF]/90"
+                        : "bg-[#00337F] hover:bg-[#00337F]/90"
+                    }`}
+                    href={`${plan.link}`}
+                    target="_blank"
+                  >
+                    Comenzar Ahora
+                  </a>
+                </CardContent>
+              </Card>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-4 bg-gray-900">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">
+          ¿Listo para modernizar tu restaurante?
+        </h2>
+        <p
+          class="text-xl mb-12 text-gray-300 max-w-2xl mx-auto leading-relaxed"
+        >
+          Únete a la comunidad de restaurantes que ya están optimizando sus
+          operaciones con Gastro Manager
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/59171666228?text=Hola%20me%20gustaria%20una%20demo%20sobre%20el%20Sistema%20Gastro%20Manager"
+            target="_blank"
+            class="bg-[#127AFF] text-white rounded hover:bg-[#127AFF]/90 px-8 py-2 text-lg font-medium"
+          >
+            Solicitar Demo Gratuita
+
+            <a
+              style="border: 1px solid white"
+              href="https://wa.me/59171666228?text=Hola%20me%20gustaria%20adquirir%20el%20Sistema%20Gastro%20Manager"
+              target="_blank"
+              class="rounded text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-2 text-lg font-medium bg-transparent"
+            >
+              Contactar Ventas
+            </a>
+          </a>
+        </div>
+      </div>
+
+      <!-- Partnership/Distribution Section -->
+      <section
+        class="py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-[url('/placeholder.svg?height=400&width=800')] opacity-5"
+        >
+        </div>
+        <div class="max-w-6xl mx-auto relative z-10">
+          <div class="text-center mb-16">
+            <Badge
+              className="mb-6 bg-[#00337F]/10 text-[#00337F] border-[#00337F]/20 px-4 py-2 text-sm font-medium"
+            >
+              Oportunidad de Negocio
+            </Badge>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              ¿Quieres ser parte de{" "}
+              <span
+                class="bg-gradient-to-r from-[#00337F] to-[#127AFF] bg-clip-text text-transparent"
+              >
+                nuestro equipo?
+              </span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Únete a nuestra red de distribuidores y ayuda a transformar la
+              industria restaurantera en tu región
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"
+          >
+            <!-- Left side - Benefits -->
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                Beneficios de ser nuestro distribuidor:
+              </h3>
+              <div class="space-y-6">
+                {
+                  [
+                    {
+                      icon: <BarChart3 className="h-6 w-6" />,
+                      title: "Comisiones Atractivas",
+                      description:
+                        "Hasta 30% de comisión por cada venta realizada",
+                    },
+                    {
+                      icon: <Users className="h-6 w-6" />,
+                      title: "Capacitación Completa",
+                      description:
+                        "Entrenamiento técnico y comercial sin costo adicional",
+                    },
+                    {
+                      icon: <Settings className="h-6 w-6" />,
+                      title: "Soporte Técnico",
+                      description:
+                        "Respaldo completo para tus clientes las 24/7",
+                    },
+                    {
+                      icon: <Store className="h-6 w-6" />,
+                      title: "Territorio Exclusivo",
+                      description:
+                        "Zona de distribución exclusiva en tu región",
+                    },
+                    {
+                      icon: <CreditCard className="h-6 w-6" />,
+                      title: "Material de Marketing",
+                      description:
+                        "Brochures, demos y material promocional incluido",
+                    },
+                    /*                   {
+                    icon: <Smartphone className="h-6 w-6" />,
+                    title: "Plataforma de Gestión",
+                    description:
+                      "Sistema para gestionar tus ventas y comisiones",
+                  }, */
+                  ].map((benefit) => (
+                    <div class="flex items-start gap-4">
+                      <div class="p-2 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-lg flex-shrink-0">
+                        {benefit.icon}
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-gray-900 mb-1">
+                          {benefit.title}
+                        </h4>
+                        <p class="text-gray-600">{benefit.description}</p>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+
+            <!-- Right side - Requirements & CTA -->
+            <div>
+              <Card
+                className="p-8 border-2 border-[#127AFF]/20 bg-white shadow-xl"
+              >
+                <CardHeader className="text-center pb-6">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-4"
+                    >¿Tienes lo que se necesita?</CardTitle
+                  >
+                  <CardDescription className="text-gray-600">
+                    Buscamos personas emprendedoras con ganas de crecer
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div class="space-y-4 mb-8">
+                    <div class="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span class="text-gray-700"
+                        >Experiencia en ventas (preferible)</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span class="text-gray-700"
+                        >Conocimiento del sector gastronómico</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span class="text-gray-700"
+                        >Red de contactos en restaurantes</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span class="text-gray-700"
+                        >Disponibilidad de tiempo completo/parcial</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span class="text-gray-700"
+                        >Ganas de emprender y crecer</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="space-y-4">
+                    <Button
+                      size="lg"
+                      className="w-full bg-[#00337F] text-white hover:bg-[#00337F]/90 text-lg font-medium group"
+                    >
+                      <a
+                        href="https://wa.me/59171666228?text=Hola%20me%20gustaria%20ser%20distribuidor%20del%20Sistema%20Gastro%20Manager"
+                        target="_blank"
+                      >
+                        Quiero ser Distribuidor
+                      </a>
+                      <ArrowRight
+                        className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
+                      />
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full border-[#127AFF] text-[#127AFF] hover:bg-[#127AFF] hover:text-white text-lg font-medium bg-transparent"
+                    >
+                      <a href="https://wa.me/59171666228?text=Hola%20me%20gustaria%20mas%20información%20sobre%20el%20Sistema%20Gastro%20Manager%20distribuidor" target="_blank"> Más Información </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <!-- Stats Section -->
+          <!--  <div
+          class="bg-gradient-to-r from-[#00337F] to-[#127AFF] rounded-3xl p-8 md:p-12 text-white"
+        >
+          <div class="text-center mb-8">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">
+              Únete a nuestro éxito
+            </h3>
+            <p class="text-white/90 max-w-2xl mx-auto">
+              Nuestros distribuidores están creciendo junto con nosotros
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div class="text-3xl md:text-4xl font-bold mb-2">15+</div>
+              <div class="text-white/80">Distribuidores Activos</div>
+            </div>
+            <div>
+              <div class="text-3xl md:text-4xl font-bold mb-2">Bs. 5,000+</div>
+              <div class="text-white/80">Promedio Mensual por Distribuidor</div>
+            </div>
+            <div>
+              <div class="text-3xl md:text-4xl font-bold mb-2">95%</div>
+              <div class="text-white/80">Satisfacción de Distribuidores</div>
+            </div>
+          </div>
+        </div> -->
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-white border-t border-gray-200 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-[#00337F] mb-4">
+              Gastro Manager
+            </h3>
+            <p class="text-gray-600 mb-8">
+              La solución tecnológica más completa para restaurantes
+            </p>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-8 text-sm text-gray-600 mb-8"
+          >
+            <a href="#" class="hover:text-[#00337F] transition-colors">
+              Términos de Servicio
+            </a>
+            <a href="#" class="hover:text-[#00337F] transition-colors">
+              Política de Privacidad
+            </a>
+            <a
+              href="https://wa.me/59171666228"
+              target="_blank"
+              class="hover:text-[#00337F] transition-colors"
+            >
+              Soporte
+            </a>
+            <a
+              href="https://wa.me/59171666228"
+              target="_blank"
+              class="hover:text-[#00337F] transition-colors"
+            >
+              Contacto
+            </a>
+          </div>
+          <div
+            class="text-center pt-8 border-t border-gray-200 text-gray-500 text-sm"
+          >
+            © 2024 Gastro Manager. Todos los derechos reservados.
+          </div>
+        </div>
+      </footer>
+    </section>
+  </div>
+</Layout>
