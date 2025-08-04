@@ -140,17 +140,17 @@ export default function ClientCarousel({ clients }) {
                   <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#00337F] transition-colors">
                     {client.name}
                   </h3>
-                  <p className="text-sm text-gray-500 group-hover:text-gray-600 transition-colors">
+                 {/*  <p className="text-sm text-gray-500 group-hover:text-gray-600 transition-colors">
                     Cliente desde 2023
-                  </p>
-                  <div className="flex items-center mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  </p> */}
+                  {/* <div className="flex items-center mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-4 w-4 fill-current" />
                       ))}
                     </div>
                     <span className="ml-2 text-sm text-gray-600">5.0</span>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </div>
