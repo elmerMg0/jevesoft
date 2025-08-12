@@ -153,6 +153,7 @@ const plans = [
 
     <!-- Clients Section -->
     <section
+      id="clients"
       class="py-24 px-4 bg-gradient-to-b from-gray-50/50 to-white relative overflow-hidden"
     >
       <div
@@ -344,6 +345,142 @@ const plans = [
       </div>
     </section>
 
+        <!-- Virtual Store Section -->
+    <section id="ecommerce" class="py-24 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <Badge className="mb-6 bg-[#127AFF]/10 text-[#00337F] border-[#127AFF]/20 px-4 py-2 text-sm font-medium">
+            Tienda Virtual Integrada
+          </Badge>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Vende <span class="bg-gradient-to-r from-[#00337F] to-[#127AFF] bg-clip-text text-transparent">online</span> sin complicaciones
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Expande tu negocio con nuestra plataforma de e-commerce integrada. Recibe pedidos online, gestiona delivery y aumenta tus ventas las 24 horas del día.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Feature 1 -->
+          <Card className="p-8 border-0 bg-white hover:shadow-xl transition-all duration-300 group">
+            <CardContent className="p-0">
+              <div class="mb-6 p-4 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-2xl w-fit group-hover:scale-110 transition-transform duration-300">
+                <Store className="h-8 w-8" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Catálogo Digital Completo</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Muestra tu menú completo con imágenes atractivas, descripciones detalladas y precios actualizados en tiempo real.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Categorías personalizables
+                </li>
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Imágenes de alta calidad
+                </li>
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Gestión de disponibilidad
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <!-- Feature 2 -->
+          <Card className="p-8 border-0 bg-white hover:shadow-xl transition-all duration-300 group">
+            <CardContent className="p-0">
+              <div class="mb-6 p-4 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-2xl w-fit group-hover:scale-110 transition-transform duration-300">
+                <Smartphone className="h-8 w-8" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Experiencia Mobile-First</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Diseño optimizado para móviles que garantiza una experiencia de compra fluida desde cualquier dispositivo.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Diseño responsive
+                </li>
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Carga ultra rápida
+                </li>
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Navegación intuitiva
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <!-- Feature 3 -->
+          <Card className="p-8 border-0 bg-white hover:shadow-xl transition-all duration-300 group">
+            <CardContent className="p-0">
+              <div class="mb-6 p-4 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-2xl w-fit group-hover:scale-110 transition-transform duration-300">
+                <CreditCard className="h-8 w-8" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Pagos variados</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Múltiples métodos de pago que facilitan la compra online.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Transferencias bancarias
+                </li>
+                <li class="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500" />
+                  Pago contra entrega
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+
+        <!-- Process Steps -->
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">¿Cómo funciona?</h3>
+            <p class="text-xl text-gray-600">Proceso simple para tus clientes, gestión automática para ti</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h4 class="font-semibold text-gray-900 mb-2">Cliente navega</h4>
+              <p class="text-sm text-gray-600">Explora tu menú digital con imágenes y descripciones detalladas</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h4 class="font-semibold text-gray-900 mb-2">Realiza pedido</h4>
+              <p class="text-sm text-gray-600">Selecciona productos, personaliza y procede al pago seguro</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h4 class="font-semibold text-gray-900 mb-2">Cajero recibe</h4>
+              <p class="text-sm text-gray-600">El pedido llega automáticamente a tu sistema</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-[#00337F] to-[#127AFF] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                4
+              </div>
+              <h4 class="font-semibold text-gray-900 mb-2">Entrega/Delivery</h4>
+              <p class="text-sm text-gray-600">Cocina tu pedido, entrega a domicilio o recibe en tienda</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Special Feature Highlight -->
     <section
       class="py-20 px-4 bg-gradient-to-r from-[#00337F] to-[#127AFF] relative overflow-hidden"
@@ -375,7 +512,7 @@ const plans = [
     </section>
 
     <!-- Pricing Section -->
-    <section class="py-24 px-4">
+    <section class="py-24 px-4" id="prices">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-20">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -487,6 +624,7 @@ const plans = [
 
       <!-- Partnership/Distribution Section -->
       <section
+        id="partnership"
         class="py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
       >
         <div
